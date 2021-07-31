@@ -1,1 +1,2 @@
-# landing_page_ddb
+# Landing page DDB
+Creating a landing page
