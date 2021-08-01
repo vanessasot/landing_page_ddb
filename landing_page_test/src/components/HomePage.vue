@@ -1,54 +1,56 @@
 <template>
   <div id="content" class="container-fluid m-0 p-0 col-sm-md-lg-xl">
-    <div id="header" class="pos-f-t">
-        <nav id="" class="navbar navbar-expand">
+    <div id="header" class=" header_nav" @scroll="scrollMenu()">
+        <nav id="mev" class="navbar navbar-expand">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand">
-                <img src="@/assets/logom7.png" />
+                <img src="@/assets/logom7white.png" />
             </a>
             <div id="navbarText" class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
+                <ul class="nav nav-fill">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#homepage">Inicio
+                        <a class=" nav-link active" href="#homepage">Inicio
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li  class="nav-item active">
+                    <li  class="nav-item">
                         <a class="nav-link" href="#who_are_we_looking_for">
                             ¿A quién buscamos?
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#benefits">
                             Beneficios
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#important_dates">
                             Fechas importantes
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="">
                             Jurado
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="">
                             Sobre nosotros
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="">
                             Aliados
                         </a>
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <form>
-                        <a href="">Contacto</a>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn  btn btn-sm btn-outline-secondary btn-outline-dark my-2 my-sm-0" type="submit">
+                            <a href="#contact" class="nav-link"><strong>Contacto</strong></a>
+                        </button>
                     </form>
                 </span>
             </div>
@@ -56,12 +58,12 @@
     </div>
     <div id="homepage" class="">
         <section>
-            <div id="about" class="container-fluid bg-warning p-4">
-                <div>
-                    <p>¿Tienes una magnífica StartUp?</p>
+            <div id="about" class="container-fluid bg-warning p-4 image align-items-end justify-content-end d-flex">
+                <div class="text1">
+                    <p id="p_about">¿Tienes una magnífica StartUp?</p>
                     <h1><strong>Haz parte de los 7 magníficos</strong></h1>
-                    <p> "Inscríbete antes del "<strong>09 de julio de 2021.</strong></p>
-                    <button @click="openModal()">Regístrate</button>
+                    <p> Inscríbete antes del <strong>09 de julio de 2021.</strong></p>
+                    <button id="registration" class="btn btn-dark mt-4 next-step" @click="openModal()">Regístrate</button>
                 </div>
             </div>
         </section>
@@ -316,9 +318,36 @@ export default {
     openModal () {
       const modal = document.getElementById('modal')
       modal.classList.add('show')
+    },
+
+    scrollMenu () {
+      var header = document.getElementById('header')
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 50) {
+          header.style.backgroundColor = '#161616'
+        } else {
+          header.style.backgroundColor = 'transparent'
+        }
+      }
+    },
+
+    scrollNav () {
+      var menu = document.getElementById('menu') // Identify target
+
+      window.addEventListener('scroll', function (event) { // To listen for event
+        event.preventDefault()
+
+        if (window.scrollY > 50) {
+          menu.style.backgroundColor = '#161616' // or default color
+        } else {
+          menu.style.backgroundColor = 'transparent'
+        }
+      })
     }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -329,8 +358,11 @@ export default {
   width: 100%;
   padding: 1rem;
   z-index: 99;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+#header .header_nav {
+    padding: 0 1rem!important;
 }
 
 .navbar {
@@ -340,6 +372,83 @@ export default {
   padding: 0.5rem 1rem;
 }
 
+#mev img {
+    width: 109px;
+    height: 57px;
+}
+
+nav a {
+    color: #fff;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+nav form button a {
+    color: #161616;
+}
+
+#homepage .image {
+    height: 100vh;
+    width: 100%;
+}
+
+#homepage .image p {
+    max-width: 400px;
+    margin: 0 0 0 auto;
+    font-size: 1.38rem;
+}
+
+#homepage .image h1 {
+    font-size: 3rem;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+strong {
+    font-weight: 700!important;
+}
+
+#about {
+    background: url("https://m7innovationcenter.com/resources/dist/img/banner-desktop.jpg") 0% 0% / cover no-repeat;
+    visibility: visible;
+}
+
+#about #registration {
+    font-size: 1.38rem;
+    cursor: pointer;
+}
+
+#about #registration:hover {
+    border-color: #161616;
+    background-color: #fff;
+    color: #161616;
+}
+
+.text1 {
+    max-width: 450px;
+    margin: 3rem;
+    text-align: right;
+    float: right;
+}
+
+.text1 #p_about {
+    text-transform: uppercase;
+}
+
+.align-items-end {
+    align-items: flex-end!important;
+}
+
+.justify-content-end {
+    justify-content: flex-end!important;
+}
+
+.d-flex {
+    display: flex!important;;
+}
 .cal_week {
     background-color: #fff;
     display: grid;
