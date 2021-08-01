@@ -12,7 +12,7 @@
                 <ul class="nav nav-fill">
                     <li class="nav-item active">
                         <a class=" nav-link active" href="#homepage">Inicio
-                            <span class="sr-only">(current)</span>
+                            <span class="sr-only"></span>
                         </a>
                     </li>
                     <li  class="nav-item">
@@ -68,19 +68,21 @@
             </div>
         </section>
         <section id="welcome">
-            <div>
-                <div>
+            <div class="container pad">
+                <div class="welcomem7">
                     <h2><strong>Bienvenidos a M7</strong></h2>
                 </div>
-                <div>
+                <div class="text2">
                     <p><strong>Más conocidos como "The Magnificient7" o el maravilloso western de la innovación y la creatividad, el primer Campus para 7 increíbles talentos.</strong></p>
                     <p>En el Grupo DDB, uno de los líderes en comunicaciones de marketing en Colombia, queremos reunir a 7 magníficas StartUps y crear un ecosistema único de trabajo, creciendo juntos durante al menos un año.</p>
                 </div>
                 <div>
                     <div>
-                        <div>
-                            <div>
-                                <a href="">"Ver más"</a>
+                        <div class="col-md-7 mx-auto">
+                            <div class="">
+                                <h4 class="more">
+                                    <a href="">Ver más</a>
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -407,6 +409,14 @@ nav form button a {
     text-transform: uppercase;
 }
 
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
 strong {
     font-weight: 700!important;
 }
@@ -449,6 +459,39 @@ strong {
 .d-flex {
     display: flex!important;;
 }
+
+#welcome .pad {
+    padding-bottom: 3rem!important;
+    padding-top: 3rem!important;
+}
+
+#welcome .welcomem7 {
+    text-transform: uppercase!important;;
+    text-align: center!important;;
+    margin-bottom: 3rem!important;
+    margin-top: 3rem!important;
+}
+
+.welcomem7 h2 {
+    font-size: 2.5rem;
+}
+
+#welcome .text2 {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center!important;
+}
+
+.more {
+    display: inline-block;
+}
+
+.more a {
+    color: #161616;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
 .cal_week {
     background-color: #fff;
     display: grid;
