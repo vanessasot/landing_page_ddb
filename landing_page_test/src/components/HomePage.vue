@@ -141,26 +141,27 @@
             </section>
         </div>
         <div>
-            <section id="benefits">
-                <div>
-                    <p>Beneficios</p>
-                    <h2><strong>¿Qué obtienen las StartUps?</strong></h2>
-                </div>
-                <div>
-                    <div>
-                        <div>
+            <section class="bg-lite-gray py-5" id="benefits">
+                <div class="container">
+                    <div class="title text3">
+                        <p>Beneficios</p>
+                        <h2><strong>¿Qué obtienen las StartUps?</strong></h2>
+                    </div>
+                    <div class="startups py-4">
+                    <div class="row text3 features">
+                        <div class="col-md-3 mb-4">
                             <img src="https://m7innovationcenter.com/resources/dist/img/icon-beneficios-1.svg">
                             <p><strong>Acuerdo de alianza estratégica</strong> no vinculante con DDB</p>
                         </div>
-                        <div>
+                        <div class="col-md-3 mb-4">
                             <img src="https://m7innovationcenter.com/resources/dist/img/icon-beneficios-2.svg">
                             <p><strong>Espacios de trabajo exclusivos</strong> en los campos de Bogotá y Medellín</p>
                         </div>
-                        <div>
+                        <div class="col-md-3 mb-4">
                             <img src="https://m7innovationcenter.com/resources/dist/img/icon-beneficios-3.svg">
                             <p><strong>Acceso a créditos especiales</strong> de Amazon Cloud computing services</p>
                         </div>
-                        <div>
+                        <div class="col-md-3 mb-4">
                             <img src="https://m7innovationcenter.com/resources/dist/img/icon-beneficios-4.svg">
                             <p><strong>Eventos, capacitaciones,</strong> charlas y actividades, dentro del Campus.</p>
                         </div>
@@ -169,12 +170,13 @@
                     </div>
                     <div></div>
                 </div>
+                </div>
             </section>
         </div>
         <div>
-            <section id="important_dates">
-                <div>
-                    <div>
+            <section class="my-5 dates" id="important_dates">
+                <div class="container">
+                    <div class="title text3">
                         <p>FECHAS IMPORTANTES</p>
                         <h2><strong>¿Hasta cuándo participar?</strong></h2>
                     </div>
@@ -591,6 +593,38 @@ li {
     border-left: 1px solid #fdd200;
     padding-left: 1rem;
     padding-bottom: 1.6rem;
+}
+
+#homepage #benefits h2 {
+    color: #141414;
+}
+
+#homepage .startups img {
+    width: 50%!important;
+}
+
+#homepage img {
+    object-fit: cover;
+    object-position: center;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+#homepage .startups p {
+    max-width: 195px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+#homepage .dates {
+    overflow: hidden;
+}
+
+#homepage .dates h2 {
+    color: #141414;
 }
 
 .cal_week {
