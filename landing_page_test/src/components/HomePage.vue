@@ -180,18 +180,25 @@
                         <p>FECHAS IMPORTANTES</p>
                         <h2><strong>¿Hasta cuándo participar?</strong></h2>
                     </div>
-                    <div>
+                    <div class="subtitle text3 pb-5">
                         <p>La convocatoria durará 8 días, agrega un recordatorio a tu calendario para participar.</p>
                     </div>
-                    <div>
-                        <div>
-                            <div class="calendar">
-                                <div class="month">
-                                    <strong><a href="">  </a>AGOSTO</strong>
-                                </div>
-                            </div>
+                    <div class="cal_activity">
+                        <div class="swiper-container-pointer-events swiper-container">
+                            <div class="swiper-wrapper" id="">
+                                <div>
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-lg-6 p-lg-5 order-2 order-lg-1 calendar">
+                                            <div class="calendar">
+                                                <div class="month">
+                                                    <strong><a href="">  </a>AGOSTO</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                         </div>
-                        <div>
+                            </div>
+                            <div>
                             <div class="cal_week">
                                 <div>DOM</div>
                                 <div>LUN</div>
@@ -297,6 +304,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -329,25 +337,11 @@ export default {
 
       window.onscroll = function () {
         if (window.pageYOffset > 50) {
-          header.style.backgroundColor = '#161616'
+          header.style.backgroundColor = '#141414'
         } else {
           header.style.backgroundColor = 'transparent'
         }
       }
-    },
-
-    scrollNav () {
-      var menu = document.getElementById('menu') // Identify target
-
-      window.addEventListener('scroll', function (event) { // To listen for event
-        event.preventDefault()
-
-        if (window.scrollY > 50) {
-          menu.style.backgroundColor = '#161616' // or default color
-        } else {
-          menu.style.backgroundColor = 'transparent'
-        }
-      })
     }
   }
 }
@@ -625,6 +619,33 @@ img {
 
 #homepage .dates h2 {
     color: #141414;
+}
+
+.swiper-container-pointer-events {
+    touch-action: pan-y;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+#homepage .calendar {
+    --side-padding: 20px;
+    --border-radius: 34px;
+    --accent-br: 15px;
+    width: 400px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.calendar {
+    min-height: 420px;
 }
 
 .cal_week {
