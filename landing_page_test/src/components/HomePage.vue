@@ -90,20 +90,20 @@
             </div>
         </section>
         <div>
-            <section id="who_are_we_looking_for">
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div id="looking">
+            <section class="pad1 search d-flex align-items-center" id="who_are_we_looking_for">
+                <div class="container-fluid">
+                    <div class="who_looking">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-md-6 text_col1">
+                                <div class="title text3" id="looking">
                                     <p>START UPS</p>
                                     <h2><strong>¿A quién buscamos?</strong></h2>
                                 </div>
-                                <div>
+                                <div class="subtitle text3 pad3">
                                     <p>Las mejores StartUps de creatividad, contenido, data, marketing digital o relacionadas a las siguientes tecnologías, pueden participar.</p>
                                 </div>
                             </div>
-                            <div>
+                            <div class="col-md-6 mb-3">
                                 <ul>
                                     <li>
                                         <span>01.</span>
@@ -452,6 +452,10 @@ strong {
     align-items: flex-end!important;
 }
 
+.align-items-center {
+    align-items: center!important;
+}
+
 .justify-content-end {
     justify-content: flex-end!important;
 }
@@ -490,6 +494,103 @@ strong {
     color: #161616;
     text-decoration: underline;
     font-size: 1rem;
+}
+
+#homepage .search {
+    background: url(https://m7innovationcenter.com/resources/dist/img/bg-a-quien-buscamos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+}
+
+#who_are_looking_for .pad1 {
+    padding-bottom: 3rem!important;
+    padding-top: 3rem!important;
+}
+
+.row {
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.text_col1 {
+    text-align: right!important;
+}
+
+#homepage .title {
+    padding: 4rem 0 0;
+}
+
+.text3 {
+    text-align: center!important;
+}
+
+#homepage .title p {
+    background: #fdd200;
+    display: table;
+    margin: 0 auto;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    padding: 0 1px 0 5px;
+    color: #141414;
+    text-transform: uppercase;
+}
+
+#homepage .title h2 {
+    font-size: 2.5rem;
+    color: #fdd200;
+}
+
+#homepage .subtitle {
+    max-width: 430px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.pad3 {
+    padding-bottom: 3rem!important;
+}
+
+#homepage .search .subtitle p {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#homepage .who_looking .subtitle p {
+    color: #fff;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+li {
+    text-align: left;
+}
+
+#homepage .who_looking li {
+    color: #fff;
+    list-style: none;
+}
+
+#homepage .who_looking li span {
+    color: #fdd200;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    width: 30px;
+}
+
+#homepage .who_looking li p {
+    margin-left: 1rem;
+    margin: 0;
+    display: inline-block;
+    border-left: 1px solid #fdd200;
+    padding-left: 1rem;
+    padding-bottom: 1.6rem;
 }
 
 .cal_week {
